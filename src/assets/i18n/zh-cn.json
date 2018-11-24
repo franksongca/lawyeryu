@@ -1,0 +1,10 @@
+{
+  "Title": "翻译例子",
+  "Intro": "您好！我是 {{name}}, 我今年 {{age}} 岁。",
+  "Startpage": {
+    "TranslationSections": "世界你好"
+  },
+  "Aboutpage": {
+    "TranslationSections": "我们从这里开始"
+  }
+}
