@@ -9,6 +9,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { PageBusinessRangeComponent } from './components/page-business-range/page-business-range.component';
+import { PageConsultingInfoComponent } from './components/page-consulting-info/page-consulting-info.component';
+import { PageBlogComponent } from './components/page-blog/page-blog.component';
+import { PageContactUsComponent } from './components/page-contact-us/page-contact-us.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ContentService } from './services/content.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -23,7 +29,23 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
-  }
+  },
+  {
+    path: 'business',
+    component: PageBusinessRangeComponent
+  },
+  {
+    path: 'consulting',
+    component: PageConsultingInfoComponent
+  },
+  {
+    path: 'blog',
+    component: PageBlogComponent
+  },
+  {
+    path: 'contact',
+    component: PageContactUsComponent
+  },
 ];
 
 @NgModule({
@@ -31,7 +53,12 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    PageBusinessRangeComponent,
+    PageConsultingInfoComponent,
+    PageBlogComponent,
+    PageContactUsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +76,10 @@ const routes: Routes = [
   entryComponents: [
     AboutComponent,
     ContactComponent
-  ],  providers: [],
+  ],  
+  providers: [
+    ContentService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

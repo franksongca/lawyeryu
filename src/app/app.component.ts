@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { ContentService } from './services/content.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   user = {
@@ -13,7 +14,8 @@ export class AppComponent {
   };
 
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
+    translate.setDefaultLang('zh-cn');
+    ContentService.CurrentLang = 'zh-cn';
   }
 
   switchLanguage(language: string) {

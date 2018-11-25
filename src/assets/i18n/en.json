@@ -1,4 +1,5 @@
 {
+  "Language": "中 文",
   "Title": "Translation example",
   "Intro": "Hello I am {{name}}, I am {{age}} years old.",
   "Startpage": {
@@ -6,5 +7,12 @@
   },
   "Aboutpage": {
     "TranslationSections": "We are letsboot"
+  },
+  "Messages": {
+    "businessRange": "Business Range",
+    "consultingInfo": "Consulting",
+    "blogArticles": "Blog",
+    "concatUs": "Contact Us"
   }
+
 }

@@ -1,4 +1,5 @@
 {
+  "Language": "English",
   "Title": "翻译例子",
   "Intro": "您好！我是 {{name}}, 我今年 {{age}} 岁。",
   "Startpage": {
@@ -6,5 +7,11 @@
   },
   "Aboutpage": {
     "TranslationSections": "我们从这里开始"
+  },
+  "Messages": {
+    "businessRange": "执业范围",
+    "consultingInfo": "顾问简介",
+    "blogArticles": "博客文章",
+    "concatUs": "联系我们"
   }
 }
