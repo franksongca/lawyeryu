@@ -65,6 +65,7 @@ const routes: Routes = [
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
+    RouterModule.forRoot(routes),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -76,7 +77,7 @@ const routes: Routes = [
   entryComponents: [
     AboutComponent,
     ContactComponent
-  ],  
+  ],
   providers: [
     ContentService
   ],
