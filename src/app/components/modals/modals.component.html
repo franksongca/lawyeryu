@@ -1,0 +1,22 @@
+<ngx-smart-modal #simpleModal identifier="simpleModal">
+  <div *ngIf="simpleModal.hasData()">
+    <div class="title">{{simpleModal.getData().Title | translate}}</div>
+    <hr>
+    <div>
+      <p>{{simpleModal.getData().Body | translate}}</p>
+    </div>
+
+    <hr>
+
+    <button class="btn" *ngIf="!!simpleModal.getData().Buttons.BtnYes" (click)="simpleModal.getData().Callback('yes');simpleModal.close()">{{ simpleModal.getData().Buttons.BtnYes | translate}}</button>
+    <button class="btn" *ngIf="!!simpleModal.getData().Buttons.BtnNo" (click)="simpleModal.getData().Callback('no');simpleModal.close()">{{ simpleModal.getData().Buttons.BtnNo | translate}}</button>
+    <button class="btn" *ngIf="!!simpleModal.getData().Buttons.BtnCancel" (click)="simpleModal.getData().Callback('cancel');simpleModal.close()">{{ simpleModal.getData().Buttons.BtnCancel | translate}}</button>
+  </div>
+</ngx-smart-modal>
+
+<ngx-smart-modal #myModal2 identifier="myModal2">
+  <h1>{{'Title' | translate}}</h1>
+  <p>Some stuff...2</p>
+
+  <button (click)="myModal.close()">Close</button>
+</ngx-smart-modal>

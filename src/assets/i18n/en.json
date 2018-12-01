@@ -13,6 +13,9 @@
     "consultingInfo": "Consulting",
     "blogArticles": "Blog",
     "concatUs": "Contact Us"
-  }
-
+  },
+  "TXT_ABOUT_TITLE": "About",
+  "TXT_ABOUT_BODY": "About body ...",
+  "TXT_BUTTON_CONFIRM": "OK",
+  "TXT_BUTTON_CANCEL": "Cancel"
 }

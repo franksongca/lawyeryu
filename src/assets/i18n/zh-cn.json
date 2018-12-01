@@ -13,5 +13,9 @@
     "consultingInfo": "顾问简介",
     "blogArticles": "博客文章",
     "concatUs": "联系我们"
-  }
+  },
+  "TXT_ABOUT_TITLE": "关于我们",
+  "TXT_ABOUT_BODY": "关于我们 ...",
+  "TXT_BUTTON_CONFIRM": "确认",
+  "TXT_BUTTON_CANCEL": "取消"
 }

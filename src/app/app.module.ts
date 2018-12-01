@@ -4,6 +4,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -14,7 +15,9 @@ import { PageConsultingInfoComponent } from './components/page-consulting-info/p
 import { PageBlogComponent } from './components/page-blog/page-blog.component';
 import { PageContactUsComponent } from './components/page-contact-us/page-contact-us.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ModalsComponent } from './components/modals/modals.component';
 import { ContentService } from './services/content.service';
+import { ModalsService } from './services/modals/modals.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -58,7 +61,8 @@ const routes: Routes = [
     PageConsultingInfoComponent,
     PageBlogComponent,
     PageContactUsComponent,
-    HeaderComponent
+    HeaderComponent,
+    ModalsComponent
   ],
   imports: [
     BrowserModule,
@@ -72,14 +76,16 @@ const routes: Routes = [
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    NgxSmartModalModule.forRoot()
   ],
   entryComponents: [
     AboutComponent,
     ContactComponent
   ],
   providers: [
-    ContentService
+    ContentService,
+    ModalsService
   ],
   bootstrap: [AppComponent]
 })
