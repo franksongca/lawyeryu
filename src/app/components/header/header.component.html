@@ -1,0 +1,9 @@
+<div class="banner">
+  <img src="./assets/images/R-YU LOGO@1x.png">
+  <input type="button" [value]="'Language' | translate" class="btn-lang" (click)="toggleLanguage()"/>
+  <div class="nav-bar">
+    <ul class="nav-items pull-right">
+      <li class="nav-item" *ngFor="let item of menuItems" (click)="navigateTo(item.route)">{{ item.value | translate}}</li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+{
+  "defaultLanguage": "zh-cn",
+  "menu": [
+    {"tag": "businessRange", "route": "business"},
+    {"tag": "consultingInfo", "route":"consulting"},
+    {"tag": "blogArticles", "route": "blog"},
+    {"tag": "concatUs", "route": "contact"}
+  ],
+  "blogs": [
+    {
+      "title": "当遇到法律问题时，谁有资格代理您？",
+      "comments": "【编者按】司法部统计，2017年，每人每年需要处理2.3件法律事务。法律法规浩如烟海，判例裁决多如牛毛。在众多的法律困惑中，谁是您的贴心人？本文给出了一下常识性的回答。",
+      "file": "001.json"
+    }
+  ]
+}
+
+
+

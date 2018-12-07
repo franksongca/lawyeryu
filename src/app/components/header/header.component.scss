@@ -1,0 +1,133 @@
+@import './../../../shared.scss';
+
+.banner {
+  background-color: $banner-background-color;
+  width: 100%;
+  position: fixed;
+
+  .nav-bar {
+    background-color: $base-color;
+    .nav-item {
+      cursor: pointer;
+      font-weight: bold;
+      color: $nav-text-color;
+      display: inline;
+    }
+  }
+
+  .btn-lang {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    color: $nav-text-color;
+    background-color: $base-color;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: $page-web-width + 1) {
+  .banner {
+    height: $banner-height-large;
+
+    img {
+      height: $logo-height-large;
+    }
+
+    .btn-lang {
+      top: 10px;
+      right: 10px;
+      font-size: 1.4em;
+    }
+
+    .nav-bar {
+      padding-right: 12px;
+      padding-top: 3px;
+      height: $navi-bar-height-large;
+      .nav-item {
+        font-size: 1.3em;
+        margin: 10px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: $page-web-width) {
+  .banner {
+    height: $banner-height-web;
+
+    img {
+      height: $logo-height-web;
+    }
+
+    .btn-lang {
+      top: 8px;
+      right: 8px;
+      font-size: 1.3em;
+    }
+
+    .nav-bar {
+      padding-right: 10px;
+      padding-top: 2px;
+      height: $navi-bar-height-web;
+      .nav-item {
+        font-size: 1.2em;
+        margin: 8px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $page-ipad-width) {
+  .banner {
+    height: $banner-height-medium;
+
+    img {
+      height: $logo-height-medium;
+    }
+
+    .btn-lang {
+      top: 7px;
+      right: 7px;
+      font-size: 1.2em;
+    }
+
+    .nav-bar {
+      padding-right: 8px;
+      padding-top: 1px;
+      height: $navi-bar-height-medium;
+
+      .nav-item {
+        font-size: 1.1em;
+        margin: 7px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $page-mobile-width) {
+  .banner {
+    height: $banner-height-small;
+
+    img {
+      height: $logo-height-small;
+    }
+
+    .btn-lang {
+      top: 5px;
+      right: 5px;
+      font-size: 1.1em;
+    }
+
+    .nav-bar {
+      height: $navi-bar-height-small;
+      padding-right: 5px;
+      .nav-item {
+        font-size: 1em;
+        margin: 5px;
+      }
+    }
+  }
+}
+
