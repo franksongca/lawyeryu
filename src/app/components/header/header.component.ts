@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { ContentService } from './../../services/content.service';
 import { ModalsService } from './../../services/modals/modals.service';
 import { ActivatedRoute, RouterModule, Routes, Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'yu-header',
@@ -10,15 +11,22 @@ import { ActivatedRoute, RouterModule, Routes, Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  currentPage;
   currentLang;
   menuItems;
   menuData;
   constructor(
     private contentService: ContentService,
     private translate: TranslateService,
+    private activatedRoute: ActivatedRoute,
     private router: Router,
+    private location: Location,
     private modalsService: ModalsService) {
     this.currentLang = ContentService.CurrentLang;
+
+    router.events.subscribe((val) => {
+      this.currentPage = this.location.path().replace('/', '');
+    });
 
     ContentService.onContentLoaded.subscribe((data) => {
       this.menuData = ContentService.MENU_CONFIG;
@@ -58,7 +66,7 @@ export class HeaderComponent implements OnInit {
           BtnNo: 'TXT_BUTTON_CANCEL',
         },
         Callback: (result) => {
-          alert(result);
+          // alert(result);
         }
       });
     } else {
@@ -67,6 +75,8 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+    //alert(this.activatedRoute);
+    let u = this.activatedRoute.url;
   }
 
 }

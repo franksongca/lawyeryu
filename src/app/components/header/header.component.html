@@ -3,7 +3,7 @@
   <input type="button" [value]="'Language' | translate" class="btn-lang" (click)="toggleLanguage()"/>
   <div class="nav-bar">
     <ul class="nav-items pull-right">
-      <li class="nav-item" *ngFor="let item of menuItems" (click)="navigateTo(item.route)">{{ item.value | translate}}</li>
+      <li class="nav-item" *ngFor="let item of menuItems" (click)="navigateTo(item.route)" [ngClass]="{'disabled': item.route === currentPage}">{{ item.value | translate}}</li>
     </ul>
   </div>
 </div>

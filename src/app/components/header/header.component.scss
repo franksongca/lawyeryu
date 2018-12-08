@@ -7,6 +7,10 @@
 
   .nav-bar {
     background-color: $base-color;
+    .disabled {
+      cursor: not-allowed !important;
+      color: gray !important;
+    }
     .nav-item {
       cursor: pointer;
       font-weight: bold;

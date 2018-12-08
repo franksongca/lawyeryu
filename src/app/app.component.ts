@@ -10,20 +10,20 @@ import { ModalsService } from './services/modals/modals.service';
 })
 export class AppComponent implements AfterViewInit {
   ngAfterViewInit() {
-    const _this = this;
-    setTimeout( () => {
-      _this.modalsService.showSimpleDialog({
-        Title: 'TXT_ABOUT_TITLE',
-        Body: 'TXT_ABOUT_BODY',
-        Buttons: {
-          BtnYes: 'TXT_BUTTON_CONFIRM',
-          BtnNo: 'TXT_BUTTON_CANCEL',
-        },
-        Callback: (result) => {
-          alert(result);
-        }
-      });
-    }, 10);
+    // const _this = this;
+    // setTimeout( () => {
+    //   _this.modalsService.showSimpleDialog({
+    //     Title: 'TXT_ABOUT_TITLE',
+    //     Body: 'TXT_ABOUT_BODY',
+    //     Buttons: {
+    //       BtnYes: 'TXT_BUTTON_CONFIRM',
+    //       BtnNo: 'TXT_BUTTON_CANCEL',
+    //     },
+    //     Callback: (result) => {
+    //       alert(result);
+    //     }
+    //   });
+    // }, 10);
 
   }
 

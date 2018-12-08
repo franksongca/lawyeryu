@@ -1,9 +1,9 @@
 <div class="page-continer">
   <div class="blog-bza" [innerHtml]="blog?.comments"></div>
-  <div class="blog-title" [innerHtml]="blog?.title"></div>
+  <div class="page-title" [innerHtml]="blog?.title"></div>
 
   <div *ngFor="let paragraph of blog?.paragraphs">
-    <div class="blog-subtitle" [innerHtml]="paragraph?.title"></div>
+    <div class="page-subtitle" [innerHtml]="paragraph?.title"></div>
     <p *ngFor="let p of paragraph?.lines" [innerHtml]="p"></p>
   </div>
 </div>

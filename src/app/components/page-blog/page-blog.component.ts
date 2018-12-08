@@ -15,6 +15,11 @@ export class PageBlogComponent implements OnInit {
       this.blogs = ContentService.BLOGS;
       this.loadBlog(0);
     });
+
+    if (ContentService.BLOGS) {
+      this.blogs = ContentService.BLOGS;
+      this.loadBlog(0);
+    }
   }
 
   loadBlog(n) {
