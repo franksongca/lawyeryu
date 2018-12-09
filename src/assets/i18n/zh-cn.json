@@ -17,5 +17,7 @@
   "TXT_ABOUT_TITLE": "关于我们",
   "TXT_ABOUT_BODY": "关于我们 ...",
   "TXT_BUTTON_CONFIRM": "确认",
-  "TXT_BUTTON_CANCEL": "取消"
+  "TXT_BUTTON_CANCEL": "取消",
+
+  "TXT_SELECT_BLOG": "请选择博客文章"
 }

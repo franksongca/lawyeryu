@@ -1,9 +1,29 @@
 <div class="page-continer">
-  <div class="blog-bza" [innerHtml]="blog?.comments"></div>
-  <div class="page-title" [innerHtml]="blog?.title"></div>
+  <div class="blog-list-float" [ngStyle]="{'left': status ? 0 : '-280px'}" >
+    <div class="extra-btn" (click)="toggleLogMenu()"><i class="fa fa-angle-double-left" *ngIf="status"></i><i class="fa fa-angle-double-right"  *ngIf="!status"></i></div>
+    <ng-container *ngTemplateOutlet="bolgList"></ng-container>
+  </div>
+  <div class="blog-wrapper">
+    <div class="blog-list">
+      <ng-container *ngTemplateOutlet="bolgList"></ng-container>
+    </div>
+    <div class="blog-content">
+      <div class="blog-bza" [innerHtml]="blog?.comments"></div>
+      <div class="page-title" [innerHtml]="blog?.title"></div>
 
-  <div *ngFor="let paragraph of blog?.paragraphs">
-    <div class="page-subtitle" [innerHtml]="paragraph?.title"></div>
-    <p *ngFor="let p of paragraph?.lines" [innerHtml]="p"></p>
+      <div *ngFor="let paragraph of blog?.paragraphs">
+        <div class="page-subtitle" [innerHtml]="paragraph?.title"></div>
+        <p *ngFor="let p of paragraph?.lines" [innerHtml]="p"></p>
+      </div>
+    </div>
   </div>
 </div>
+
+<ng-template #bolgList>
+  <div class="select-blog">{{ 'TXT_SELECT_BLOG' | translate}}</div>
+  <div class="blog-list-float-container">
+    <ul class="list-group blog-list-group">
+      <li class="list-group-itam blog-item" *ngFor="let b of blogs" (click)="loadBlog(b.index)">{{b.title}}</li>
+    </ul>
+  </div>
+</ng-template>

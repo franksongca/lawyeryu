@@ -10,6 +10,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class PageBlogComponent implements OnInit {
   blogs;
   blog;
+  status = false;
+
   constructor(private domSanitizer: DomSanitizer) {
     ContentService.onContentLoaded.subscribe((data) => {
       this.blogs = ContentService.BLOGS;
@@ -41,8 +43,15 @@ export class PageBlogComponent implements OnInit {
           title: this.domSanitizer.bypassSecurityTrustHtml(section.title),
           lines: lines
         });
+
+        this.status = false;
       });
     });
+  }
+
+
+  toggleLogMenu() {
+    this.status = !this.status;
   }
 
   ngOnInit() {
