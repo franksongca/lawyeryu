@@ -23,7 +23,7 @@
   <div class="select-blog">{{ 'TXT_SELECT_BLOG' | translate}}</div>
   <div class="blog-list-float-container">
     <ul class="list-group blog-list-group">
-      <li class="list-group-itam blog-item" *ngFor="let b of blogs" (click)="loadBlog(b.index)">{{b.title}}</li>
+      <li class="list-group-itam blog-item" *ngFor="let b of blogs" [ngClass]="{'hight-light-item': b.index === selectBlog}" (click)="loadBlog(b.index)">{{b.title}}</li>
     </ul>
   </div>
 </ng-template>

@@ -26,15 +26,18 @@ $banner-height-small: 100px;
 $logo-height-small: 95px;
 $navi-bar-height-small: 24px;
 
-$banner-background-color: #4db6ac;
+$banner-background-color: #bcf3ed;
 $page-background-color: #eaeee1;
 
 $blog-lient-menu-width-float: 280px;
 $blog-lient-menu-width-fixed: 350px;
 
+$blog-title-height: 35px;
+$blog-item-highlight: #65dce8;
+
 .page-continer {
   width: 100%;
-  background-color: green; /*$page-background-color*/;
+  background-color: $page-background-color;
   position: fixed;
   overflow-x: hidden;
   overflow-y: auto;
@@ -53,7 +56,10 @@ $blog-lient-menu-width-fixed: 350px;
   top: 0;
   display: block;
   height: 100%;
-  background-color: yellow;
+  background-color: lightgray;
+  border-right: 4px solid $base-color;
+  box-shadow: 3px 0px rgba(50, 50, 50, 0.5);
+
 }
 
 .blog-content {
@@ -63,7 +69,6 @@ $blog-lient-menu-width-fixed: 350px;
   padding: 10px;
   padding-left: 20px;
   height: 100%;
-  background-color: red;
 }
 
 @media only screen and (min-width: $page-web-width + 1) {
@@ -89,6 +94,15 @@ $blog-lient-menu-width-fixed: 350px;
     }
     .blog-list-float {
       display: none;
+    }
+    .select-blog {
+      font-size: 1.6em;
+    }
+    .blog-item {
+      font-size: 12pt !important;
+    }
+    .blog-list-float-container {
+      height: calc(100% - #{$header-height-large} - #{$blog-title-height});
     }
   }
 }
@@ -116,6 +130,16 @@ $blog-lient-menu-width-fixed: 350px;
     }
     .blog-list-float {
       display: none;
+    }
+    .select-blog {
+      font-size: 1.6em;
+    }
+    .blog-item {
+      font-size: 12pt !important;
+    }
+
+    .blog-list-float-container {
+      height: calc(100% - #{$header-height-web} - #{$blog-title-height});
     }
   }
 }
@@ -145,8 +169,15 @@ $blog-lient-menu-width-fixed: 350px;
       display: block;
       width: $blog-lient-menu-width-float;
     }
+    .select-blog {
+      font-size: 1.5em;
+    }
+    .blog-item {
+      font-size: 10.5pt !important;
+    }
+
     .blog-list-float-container {
-      height: calc(100% - #{$header-height-medium} - 20px);
+      height: calc(100% - #{$header-height-medium} - #{$blog-title-height});
     }
   }
 }
@@ -176,8 +207,14 @@ $blog-lient-menu-width-fixed: 350px;
       display: block;
       width: $blog-lient-menu-width-float;
     }
+    .select-blog {
+      font-size: 1.4em;
+    }
+    .blog-item {
+      font-size: 10pt !important;
+    }
     .blog-list-float-container {
-      height: calc(100% - #{$header-height-small} - 20px);
+      height: calc(100% - #{$header-height-small} - #{$blog-title-height});
     }
   }
 }

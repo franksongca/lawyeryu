@@ -10,6 +10,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class PageBlogComponent implements OnInit {
   blogs;
   blog;
+  selectBlog = 0;
   status = false;
 
   constructor(private domSanitizer: DomSanitizer) {
@@ -25,6 +26,7 @@ export class PageBlogComponent implements OnInit {
   }
 
   loadBlog(n) {
+    this.selectBlog = n;
     ContentService.loadBlogJson(this.blogs[n].file).subscribe((res) => {
       this.blog = {
         title: this.domSanitizer.bypassSecurityTrustHtml(this.blogs[n].title),

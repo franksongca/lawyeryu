@@ -46,14 +46,27 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleLanguage() {
-    if (this.currentLang === 'zh-cn') {
-      this.currentLang = 'en';
-    } else {
-      this.currentLang = 'zh-cn';
-    }
-    this.translate.use(this.currentLang);
-    ContentService.CurrentLang = this.currentLang;
-    this.updateNavigationMenu();
+    this.showAbputEng();
+    // if (this.currentLang === 'zh-cn') {
+    //   this.currentLang = 'en';
+    // } else {
+    //   this.currentLang = 'zh-cn';
+    // }
+    // this.translate.use(this.currentLang);
+    // ContentService.CurrentLang = this.currentLang;
+    // this.updateNavigationMenu();
+  }
+
+  showAbputEng() {
+    this.modalsService.showSimpleDialog({
+      Title: 'TXT_ABOUT_ENG_TITLE',
+      Body: 'TXT_ABOUT_ENG_BODY',
+      Buttons: {
+        BtnYes: 'TXT_BUTTON_CONFIRM',
+      },
+      Callback: (result) => {
+      }
+    });
   }
 
   navigateTo(path) {

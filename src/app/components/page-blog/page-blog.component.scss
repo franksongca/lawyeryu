@@ -11,19 +11,27 @@
 }
 
 .blog-item {
-  font-size: 10pt !important;
+  margin-top: 7px;
   cursor: pointer;
 }
 
+.hight-light-item {
+  color: white;
+  background-color: $base-color;
+}
+
 .extra-btn {
+  padding: 0 3px;
   cursor: pointer;
   position: absolute;
   top: 0;
-  right: -15px;
-  font-size: 30px;
-  color: red;
-  background-color: yellow;
+  right: -21px;
+  font-size: 26px;
+  color: white;
+  background-color: $base-color;
   border-bottom-right-radius: 5px;
+  box-shadow: 3px 0px rgba(50, 50, 50, 0.5);
+
 }
 
 .blog-list-float-container {
@@ -40,7 +48,8 @@
   font-size: 1.2em;
   width: 100%;
   text-align: center;
-  margin: 5px;
+  padding: 5px;
+  height: $blog-title-height;
 }
 
 .blog-list-group {
