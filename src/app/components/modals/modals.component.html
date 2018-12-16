@@ -13,10 +13,3 @@
     <button class="btn" *ngIf="!!simpleModal.getData().Buttons.BtnCancel" (click)="simpleModal.getData().Callback('cancel');simpleModal.close()">{{ simpleModal.getData().Buttons.BtnCancel | translate}}</button>
   </div>
 </ngx-smart-modal>
-
-<ngx-smart-modal #myModal2 identifier="myModal2">
-  <h1>{{'Title' | translate}}</h1>
-  <p>Some stuff...2</p>
-
-  <button (click)="myModal.close()">Close</button>
-</ngx-smart-modal>
